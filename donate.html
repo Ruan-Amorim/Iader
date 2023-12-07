@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doação via Pix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4E3E78;
+      color: #A18FD7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transition-duration: 3s;
+    }
+
+    .donation-container {
+      background-color: #7964B6;
+      border-radius: 10px;
+      padding: 20px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .donate-button {
+      background-color: #50448B;
+      color: #A18FD7;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .donate-button:hover {
+      background-color: #4E3E78;
+    }
+
+    .donate-button:active {
+      transform: scale(0.95);
+    }
+
+    #qrcode-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #qrcode {
+      max-width: 100%;
+      height: auto;
+      margin: 20px;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .donation-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 30px;
+        
+      }
+
+      #qrcode-container {
+        margin-top: 0;
+        padding-left: 20px;
+      }
+      
+    }
+    .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 6.5px;    
+  padding: 2px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+  background: #7964B6;
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+    <a class="close-btn"href="Home.html">&times; Voltar</a>
+  <div class="donation-container">
+    <div>
+      <h2>Faça uma Doação via Pix</h2>
+      <p>Para doar, utilize a chave Pix abaixo:</p>
+      <p><strong>Chave Pix:</strong><i id="pixKey"> laudeceian36@gmail.com</i></p>
+      <button onclick="copyPixKey()" class="donate-button">Copiar Chave Pix</button>
+    </div>
+
+    <div id="qrcode-container">
+      <img id="qrcode" src="qrcode-pix.png" alt="QR Code com logotipo">
+    </div>
+  </div>
+
+  <script>
+    function copyPixKey() {
+      var pixKey = document.getElementById("pixKey");
+      var textArea = document.createElement("textarea");
+      textArea.value = pixKey.innerText.trim();
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+
+      alert("Chave Pix copiada!");
+    }
+  </script>
+</body>
+</html>

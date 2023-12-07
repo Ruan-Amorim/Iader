@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Álbuns</title>
+  <style>
+      body {
+      height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: linear-gradient(125deg, #50448B,#7964B6,#6C3EA3);
+}
+h2{
+    color: whitesmoke;
+    text-align: center;
+    padding:0px;
+    margin:0px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.album {
+  position: relative;
+  margin: 20px;  
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 435px;
+  box-shadow: 3px 3px 5px #262243d9; /* Ocupa 100% da largura disponível em telas pequenas */
+} 
+
+.album:hover {
+  transform: scale(1.1);
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.album:hover .overlay {
+  opacity: 1;
+}
+
+
+.overlay p {
+  font-size: 14px;
+}
+
+/* Estilos adicionais para melhorar a apresentação */
+/* h1 {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}  */
+
+/* Adaptação para telas pequenas */
+@media screen and (max-width: 767px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .album {
+    width: 80%;/* Ocupa 80% da largura disponível em telas pequenas */
+  }
+}
+
+/* Seção de Fotos */
+.photo-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.photo-section img {
+  width: 80%;
+  max-width: 435px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: fixed ;
+  top: 10px;
+  right: 6.5px;    
+  padding: 2px 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: #7964B6;
+  border-radius: 50%;
+}
+p{text-align: left; padding-left: 0px;}
+div#log-Home{
+    text-align: center;
+    box-shadow: 0px 3px 5px #3a2d59df;
+}
+div#log-Home a{
+    text-decoration:none;
+    font-size: 1em;
+    color: whitesmoke;
+    padding: 5px;
+}
+div#log-Home h2{
+    text-shadow: 3px 3px 5px #3a2d59ce;
+}
+/* Adicione estilos conforme necessário para ajustar a aparência da seção de fotos */
+  </style>
+</head>
+<body>
+    <header>
+       <img src="Logo-transp.png" alt="">
+       <h1>Iader Pedregal</h1>
+      
+   </header>
+   <div id="log-Home"><a href="Home.html"><h2>&leftarrow; Voltar</h2></a></div>   
+    <h2 style="text-align: center;
+     margin-top: 35px; font-size: 2em;letter-spacing: 3px;text-shadow: 3px 3px 5px #3a2d59ce;" >Galeria</h2>
+  <div class="gallery">
+    <div class="album" onclick="openAlbum('album1')">
+      <img src="remanescentes.jpg" alt="Capa do Álbum 1">
+      <div class="overlay">
+        <h2>Remanescentes</h2>
+        <p>Este é o conjunto de Jovens da Iader pedregal, Remanescentes.</p>
+      </div>
+    </div>
+    <div class="album" onclick="openAlbum('album3')">
+      <img src="SC3.jpg" alt="Capa do Álbum 3">
+      <div class="overlay">
+        <h2>Santa ceia</h2>
+        <p>Algumas imagens de cultos de santa ceia.</p>
+      </div>
+     </div>
+     
+     <div class="album" onclick="openAlbum('album4')">
+      <img src="CT1.jpg" alt="Capa do Álbum 4">
+      <div class="overlay">
+        <h2>Outros cultos</h2>
+        <p>Imagens aleatórias de cultos.</p>
+      </div>
+     </div>
+
+    <div class="album" onclick="openAlbum('album2')">
+      <img src="CA2.jpg" alt="Capa do Álbum 2">
+      <div class="overlay">
+        <h2>Luz do Mundo</h2>
+        <p>Este é o conjunto de Crianças da Iader pedregal, luz do mundo.</p>
+      </div>
+
+      
+    </div>
+
+    <!-- Adicione mais álbuns conforme necessário -->
+  </div>
+
+  <!-- Seção de Fotos -->
+  <div class="photo-section" id="album1" style="display: none;">
+    <div class="close-btn" onclick="closeAlbum('album1')">&times;</div>
+    <img src="RM1.jpg" alt="Foto 1 do Álbum 1">
+    <img src="RM2.jpg" alt="Foto 2 do Álbum 1">
+    <img src="RM3.jpg" alt="Foto 3 do Álbum 1">
+    <img src="RM23.jpg" alt="Foto 4 do Álbum 1">
+    <img src="RM4.jpg" alt="Foto 5 do Álbum 1">
+    <img src="RM5.jpg" alt="Foto 6 do Álbum 1">
+    <img src="RM6.jpg" alt="Foto 7 do Álbum 1">
+    <img src="RM7.jpg" alt="Foto 8 do Álbum 1">
+    <img src="RM8.jpg" alt="Foto 9 do Álbum 1">
+    <img src="RM9.jpg" alt="Foto 10 do Álbum 1">
+    <img src="RM10.jpg" alt="Foto 11 do Álbum 1">
+    <img src="RM11.jpg" alt="Foto 12 do Álbum 1">
+    <img src="RM12.jpg" alt="Foto 13 do Álbum 1">
+    <img src="RM13.jpg" alt="Foto 14 do Álbum 1">
+    <img src="RM14.jpg" alt="Foto 15 do Álbum 1">
+    <img src="RM15.jpg" alt="Foto 16 do Álbum 1">
+    <img src="RM16.jpg" alt="Foto 17 do Álbum 1">
+    <img src="RM17.jpg" alt="Foto 18 do Álbum 1">
+    <img src="RM18.jpg" alt="Foto 19 do Álbum 1">
+    <img src="RM19.jpg" alt="Foto 20 do Álbum 1">
+    <img src="RM20.jpg" alt="Foto 21 do Álbum 1">
+    <img src="RM21.jpg" alt="Foto 22 do Álbum 1">
+    
+    <!-- Adicione mais fotos conforme necessário -->
+  </div>
+
+  <div class="photo-section" id="album2" style="display: none;">
+    <div class="close-btn" onclick="closeAlbum('album2')">&times;</div>
+    <img src="CA1.jpg" alt="Foto 1 do Álbum 2">
+    <img src="CA3.jpg" alt="Foto 2 do Álbum 2">
+    <img src="CA4.jpg" alt="Foto 3 do Álbum 2">
+    <img src="CA5.jpg" alt="Foto 4 do Álbum 2">
+    <img src="CA6.jpg" alt="Foto 5 do Álbum 2">
+    <img src="CA7.jpg" alt="Foto 6 do Álbum 2">
+    <img src="CA8.jpg" alt="Foto 7 do Álbum 2">
+    <img src="CA9.jpg" alt="Foto 8 do Álbum 2">
+    <img src="CA10.jpg" alt="Foto 9 do Álbum 2">
+
+    <!-- Adicione mais fotos conforme necessário -->
+    
+  </div>
+    <div class="photo-section" id="album3" style="display: none;">
+        <div class="close-btn" onclick="closeAlbum('album3')">&times;</div>
+      <img src="SC1.jpg" alt="Foto 1 do Álbum 3">
+      <img src="SC2.jpg" alt="Foto 2 do Álbum 3">
+      <img src="SC4.jpg" alt="Foto 3 do Álbum 3">
+      <img src="SC5.jpg" alt="Foto 4 do Álbum 3">
+      <img src="SC6.jpg" alt="Foto 5 do Álbum 3">
+      <img src="SC7.jpg" alt="Foto 6 do Álbum 3">
+      <img src="SC8.jpg" alt="Foto 9 do Álbum 3">
+      <img src="SC9.jpg" alt="Foto 10 do Álbum 3">
+      <img src="SC10.jpg" alt="Foto 11 do Álbum 3">
+      <img src="SC11.jpg" alt="Foto 12 do Álbum 3">
+      <img src="SC12.jpg" alt="Foto 13 do Álbum 3">
+      <img src="SC13.jpg" alt="Foto 14 do Álbum 3">
+      <img src="SC14.jpg" alt="Foto 15 do Álbum 3">
+      <img src="SC15.jpg" alt="Foto 16 do Álbum 3">
+      <img src="SC16.jpg" alt="Foto 17 do Álbum 3">
+      <img src="SC17.jpg" alt="Foto 18 do Álbum 3">
+      
+    </div>
+      
+    <div class="photo-section" id="album4" style="display: none;">
+    <div class="close-btn" onclick="closeAlbum('album4')">&times;</div>  
+    <img src="CT2.jpg" alt="Foto 1 do Álbum 4">
+    <img src="CT3.jpg" alt="Foto 2 do Álbum 4">
+    <img src="CT4.jpg" alt="Foto 3 do Álbum 4">
+    <img src="CT5.jpg" alt="Foto 4 do Álbum 4">
+    <img src="CT6.jpg" alt="Foto 5 do Álbum 4">
+    <img src="CT7.jpg" alt="Foto 6 do Álbum 4">
+    <img src="CT8.jpg" alt="Foto 7 do Álbum 4">
+    <img src="CT9.jpg" alt="Foto 8 do Álbum 4">
+    <img src="CT10.jpg" alt="Foto 9 do Álbum 4">
+    <img src="CT11.jpg" alt="Foto 10 do Álbum 4">
+    <img src="CT12.jpg" alt="Foto 11 do Álbum 4">
+    <img src="CT13.jpg" alt="Foto 12 do Álbum 4">
+    </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>

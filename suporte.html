@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-query.css">
+    <title>suporte</title>
+    <style>
+
+.container {
+  min-width: 310px;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+   <header>
+       <img src="Logo-transp.png" alt="">
+       <h1>Iader Pedregal</h1>
+       
+   </header>
+<div onclick="clickHome()" id="log-Home"><img src="Icon-home2.png" alt=""></div>
+
+   <main>
+<!-- ~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~~ -->   
+     <nav id="menu">
+         <ul>
+             
+             <li><a href="Home.html">Home</a>
+             <li><a href="index.html">Quem somos</a>
+             <li><a href="Galeria.html">Galeria</a>
+             <li><a href="mural">Mural</a>
+             <li><a href="donate.html">doação</a>
+             <li><a href="#">suporte</a>
+         </ul>
+     </nav>  
+<!-- ~~~~~~~~~~~~~ CONTEÚDO ~~~~~~~~~~~~~~ -->
+    <h2>Bem-vindo ao Nosso Centro de Suporte</h2>
+
+<p>Estamos dedicados a fornecer a melhor assistência possível para tornar sua experiência conosco excepcional. Nossa equipe de suporte está pronta para ajudar a solucionar dúvidas e resolver quaisquer problemas que você possa encontrar durante sua jornada conosco.
+</p>
+<h2>Contato</h2>
+
+<p>- E-mail: iaderPedregal91@gmail.com<br>
+Número: (55) 61-98265-5251
+</p>
+<h2>Horário de Atendimento:</h2>
+
+<p>Estamos disponíveis de terça a quinta, das 9h às 18h (horário local). Responderemos prontamente a todas as consultas recebidas durante esse período.</p>
+
+<h2>Perguntas Frequentes:</h2>
+
+<p>Antes de entrar em contato, recomendamos verificar nossa seção de [Perguntas Frequentes](link_para_perguntas_frequentes) para encontrar respostas rápidas às questões comuns.</p>
+
+<h2>Chat ao Vivo:</h2>
+
+<p>Experimente nosso serviço de chat ao vivo para suporte em tempo real. Basta clicar no ícone de chat no canto inferior direito da página para iniciar uma conversa.
+</p>
+<p>Agradecemos por escolher nossos serviços. Estamos comprometidos em fornecer suporte excepcional para garantir sua satisfação contínua. Seu feedback é valioso para nós. Estamos aqui para tornar sua experiência conosco a melhor possível.</p>
+
+    <div class="container">
+    <h2 style="text-align: center;">Entre em Contato</h2>
+    <form id="contactForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" onclick="sendEmail()">Enviar Mensagem</button>
+    </form>
+  </div>
+
+    </main>
+<!-- ~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~ -->   
+   <footer>
+        <ul>
+            <li><a href="https://instagram.com/iader_pedregal?igshid=OGQ5ZDc2ODk2ZA=="><strong>Iader Pedregal</strong></a>
+            <li>Gmail: iaderPedregal91@gmail.com
+            <li>contato: (55) 61-98265-5251
+            <li>endereço: Chácara minas gerais, chácara 42/43 Pedregal (GO)
+          <li>Criador: <strong>Ruan amorim</strong>
+        </ul>
+   </footer>
+    <script>
+        function clickHome(){
+             if(menu.style.display == 'block') {
+                 menu.style.display = 'none'
+             }else {
+                 menu.style.display = 'block'
+             }
+         }
+       function sendEmail() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const subject = 'Nova mensagem de suporte';
+  const body = `Nome: ${name}\nE-mail: ${email}\nMensagem: ${message}`;
+
+  // Substitua 'seu-email@aqui.com' pelo seu endereço de e-mail
+  const mailtoLink = `mailto: ruanamorim0708@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Abre o cliente de e-mail padrão com os dados preenchidos
+  window.location.href = mailtoLink;
+}
+
+    </script>
+  
+</body>
+</html>

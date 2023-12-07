@@ -1,0 +1,110 @@
+
+/* ~~~~~~~~~~~~~~~~ SLIDE ~~~~~~~~~~~~~~~~~ */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;}
+.mySlides {
+  display: none;}
+img {
+  width: 100%;}
+/* Botões de navegação */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;}
+.prev {
+  left: 0; }
+.next {
+  right: 0;}
+/* Efeito de fade para as transições */
+.fade {
+  animation: fade 1.5s ease-in-out infinite;}
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ~~~~~~~~~~~~~ DIAS DE CULTO ~~~~~~~~~~~~~~ */
+#dias-de-culto{
+    height: 310px;
+    display: flex;
+    overflow-x: auto;
+    padding:  10px;
+    margin: auto;
+    transition-duration: 2s;}
+#dias-de-culto img{
+    position: sticky;
+    width: 200px;
+    display: block;
+    border-radius: 10px;
+    margin:15px;
+    box-shadow: 3px 3px 5px #5b4c83e1;}
+picture{
+    display: block;
+    margin: auto;}
+picture img:hover{
+    transform: translateY(-10px);
+    box-shadow: 20px 20px 25px #4f4373e1;
+    transition-duration: 1s;}
+/* ~~~~~~~~~~~~~~~~ ASIDE ~~~~~~~~~~~~~~~~~ */
+aside{
+    height: 200px;
+    width: 300px;
+    background-color: #7964B6;    
+    border-radius: 10px;
+    margin: auto;}
+aside h1{
+    width: 100%;
+    text-align: center;
+    background-color: #50448B;
+    color: whitesmoke;
+    border-radius: 10px 0px;}
+aside > ul > li > a, aside > ul > li{
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 3px 3px 5px #774a93d2;
+    text-transform: uppercase;
+    margin: 10px;}
+/* ~~~~~~~~~~~~~~~~ BUTÃO ~~~~~~~~~~~~~~~~~ */
+#outras-opcoes{
+    flex-wrap: wrap;
+    padding: 60px 0px;
+    text-align: center;}
+.Butao {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid  #7964B6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #40365de0;}
+.Butao a{
+    text-decoration: none;}
+button.Butao:hover{
+    box-shadow: 6px 6px 10px #40365de0;
+    transform: translateY(-10px);
+    transition: .7s;}
+/* ~~~~~~~~~~~~~ article fundo ~~~~~~~~~~~~~~ */
+#texto-fundo{
+    margin: 30px 0px;
+    padding: 100px 0px;
+    background-image: url('Fundo4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;}
+#texto-fundo p{
+    max-width: 1000px;
+    text-shadow: 3px 3px 5px #7e6ab657;
+    color: floralwhite;}

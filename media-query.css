@@ -1,0 +1,28 @@
+
+/* ~
+/* ~~~~~~~~~~~~~ mídias maiores~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 768px){
+    nav{
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    }
+    nav ul, li{
+        display: flex;
+       text-decoration: none;
+       margin-left: 10px;
+       padding-top: 5px;}
+    #log-Home{display: none;}
+    .Butao {
+    display: inline-block;
+    width: 180px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid  #7964B6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #40365de0;}
+    #dias-de-culto img{
+    width: 250px;}
+    footer{justify-content: center;}
+}

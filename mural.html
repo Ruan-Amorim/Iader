@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Mural</title>
+    
+    <style>
+        .container{
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .mural{
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            background-image: linear-gradient(130deg, #7964B6, #8b75af, #A18FD7);
+            border-radius: 10px 0px 10px 0px;
+            box-shadow: 3px 3px 5px #3b3468dc
+        }
+        .mural > li{
+            margin: 5px;     
+            color: whitesmoke;
+            text-decoration: none;
+            text-align: left;
+            text-shadow: 3px 3px 5px #342e5bd6;
+            
+        }
+        .cabecalho{
+            width: 100%;
+            margin: 0px 0px 10px 0px;
+            padding: 15px 5px 15px 5px;
+            background: #4E3E78;
+            border-radius: 5px;
+            color: whitesmoke;
+            text-shadow: 3px 3px 5px #3e355add;
+        }
+    </style>
+    
+</head>
+<body>
+   <header>
+       <img src="Logo-transp.png" alt="">
+       <h1>Iader Pedregal</h1>
+       
+   </header>
+<div onclick="clickHome()" id="log-Home"><img src="Icon-home2.png" alt=""></div>
+
+   <main>
+<!-- ~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~~ -->   
+     <nav id="menu">
+         <ul>
+             
+             <li><a href="Home.html">Home</a>
+             <li><a href="index.html">Quem somos</a>
+             <li><a href="Galeria.html">Galeria</a>
+             <li><a href="#">Mural</a>
+             <li><a href="donate.html">doação</a>
+             <li><a href="suporte.html">suporte</a>
+         </ul>
+     </nav>  
+<!-- ~~~~~~~~~~~~~ CONTEÚDO ~~~~~~~~~~~~~~ -->     
+     
+     <section>
+         <h2>Mural?</h2>
+             <p>No primeiro mural, queremos homenagear todos os membros da igreja, expressando nossa gratidão por sua dedicação constante ao ministério ao incluir seus nomes de forma especial.</p>
+<!-- ~~~~~~~~~~~~~ MURAL1 ~~~~~~~~~~~~~~ -->             
+         <article class="container">
+             <ul class="mural">
+      <div class="cabecalho">Membros</div>
+                 <li>Iazel
+                 <li>Noeme
+                 <li>Tião
+                 <li>Erisma
+                 <li>Soraia
+                 <li>Maria Ivanuza
+                 <li>Talita 
+                 <li>Suzi
+                 <li>Josiel
+                 <li>Maria Barreto
+                 <li>Elda 
+                 <li>Neydinha
+                 <li>Raimundo 
+                 <li>Ester Regina
+                 <li>Elaine
+                 <li>Diolino    
+                 <li>Dalvania
+                 <li>Cleidiane  
+                 <li>Antônia Clarinda
+                 <li>Adrina Grasiely 
+                 <li>Ana lucia
+                 <li>Maria de jesus 
+                 <li>Letícia 
+                 <li>Robson
+                 <li>Eronildes 
+                 <li>Camila 
+                 <li>Adrina
+                 <li>Ronildo 
+                 <li>Aksa 
+                 <li>Hellen    
+                 <li>Yasmim
+                 <li>Ana Lídia  
+                 <li>Amanda  
+                 <li>Ana clara  
+                 <li>Ester Vasconcelos
+                 <li>Yara   
+                 <li>Quézia
+                 <li>Matheus
+                 <li>Dorival  
+                 <li>Samuel
+                 <li>João Paulo 
+                 <li>Jairo   
+            </ul>
+         </article>
+         <h2>Apoiador</h2>
+         <p>Caso tenha apreciado nosso site e o esforço nele dedicado, considere tornar-se um apoiador e ter seu nome registrado no mural dos apoiadores. Sua contribuição como apoiador possibilitará a continuidade de nossas atividades, como a evangelização e a construção de templos.</p>
+         
+<!-- ~~~~~~~~~~~~~ Botões ~~~~~~~~~~~~~~ -->   
+      
+         <section id="outras-opcoes">
+      <button class="Butao"><a href="donate.html">Se torne apoiador</a></button>
+      <button class="Butao"><a href="suporte.html">Precisa de ajuda?</a></button>
+      <button class="Butao"><a href="index.html">Quem somos</a></button>
+  </section>
+         <p><strong>AVISO!</strong> pode demorar um certo tempo para o mural ser atualizado, e você ter seu nome aqui.</p>
+         
+         
+<!-- ~~~~~~~~~~~~~ MURAL2 ~~~~~~~~~~~~~~ -->         
+         <article class="container">
+             <ul class="mural">
+         <div class="cabecalho">Apoiadores</div>
+                 <li>
+                 <li>
+                 <li>
+                 <li>
+             </ul>
+         </article>
+     </section>
+
+  </main>
+<!-- ~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~ -->   
+   <footer>
+        <ul>
+            <li><a href="https://instagram.com/iader_pedregal?igshid=OGQ5ZDc2ODk2ZA=="><strong>Iader Pedregal</strong></a>
+            <li>Gmail: iaderPedregal91@gmail.com
+            <li>contato: (55) 61-98265-5251
+            <li>endereço: Chácara minas gerais, chácara 42/43 Pedregal (GO)
+          <li>Criador: <strong>Ruan amorim</strong>
+        </ul>
+   </footer>
+  <script>
+        function clickHome(){
+             if(menu.style.display == 'block') {
+                 menu.style.display = 'none'
+             }else {
+                 menu.style.display = 'block'
+             }
+         }
+    </script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

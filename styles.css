@@ -1,0 +1,134 @@
+
+@font-face  {
+    font-family: 'adorage';
+    src: url('Adorage.otf');}
+@font-face  {
+    font-family: 'natural_precision';
+    src: url('Natural Precision.otf');}
+/*-- ~~~~~~~~~~~~~~ GERAIS ~~~~~~~~~~~~~~~~ --*/
+*{
+   margin: 0px; 
+   padding: 0px;
+   font-family: Arial, Helvetica, sans-serif;}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke ;}
+h1{font-family: 'natural_precision';}
+h2{
+    font-family: 'adorage' ;
+    text-justify: auto;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px #917ab7df;
+    letter-spacing: 1px;
+    color: #50448B;
+    padding: 20px;}
+p{
+    text-justify: auto;
+    text-indent: 30px;
+    padding: 5px;
+    margin: 10px 10px 15px 10px;    
+    font-size: 1.1em;}
+/*-- ~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~ --*/
+header{
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, #50448B, #7964B6, #A18FD7);
+    padding: 15px;
+    align-content: center;
+    text-align: center;}
+header > h1{
+    font-family: 'natural_precision';
+    color: whitesmoke;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px #292549e1;
+    margin-top: 7px;}
+header > img{
+    width: 50px;
+    float: left;}
+#log-Home{
+    background-image: linear-gradient(to right, #50448B, #7964B6, #A18FD7);
+    padding: 5px;}
+#log-Home img{
+    display: block;
+    width: 35px;
+    margin: auto;}
+/*-- ~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~~ --*/
+nav{
+    display: none;
+    background-image: linear-gradient(to right, #50448B, #7964B6, #A18FD7);
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    transition-duration: 3s;}
+nav li{ margin-bottom: 5px;}
+nav > ul > li >a{
+    font-family: 'natural_precision';
+    font-size: 1.2em;
+    text-decoration:none;
+    text-shadow: 2px 2px 5px #332d5ae1;
+    color: whitesmoke;
+    padding: 3px;
+    margin-bottom: 3px;}
+nav > ul > li > a:hover{
+     background-image: linear-gradient(to bottom, #4f468be4, #7e6ab6e9, #aa8fd7e2);
+     border-radius: 5px;}
+/*-- ~~~~~~~~~~~~~~~ MAIN ~~~~~~~~~~~~~~~~~ --*/
+main{
+    width: 100%;
+    background-color: whitesmoke;
+    padding-bottom: 10px;}
+/*-- ~~~~~~~~~~~~ ARTICLES ~~~~~~~~~~~~~~~~ --*/
+article > #img-pt{
+    display: block;
+    width: 150px;
+    border-radius: 55%;
+    padding: 20px 0px 5px 0px;
+    margin: auto;}   
+a#aiz{
+    text-decoration: none;}
+a#aiz >h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.4em;}
+article{
+    padding: 30px 0px 50px 0px;}
+/*-- ~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~ --*/
+footer{
+    width: 100%;
+    text-align: center;
+    background: #7e6ab6e9;
+    margin-top: 30px;
+    text-transform: uppercase;
+    box-shadow: 0px -3px 5px #313a61d4;}
+footer > ul > li{
+    list-style: none;
+    color: whitesmoke;
+    padding: 10px;
+    text-shadow: 3px 3px 5px #423366c8;}
+footer a{
+    text-decoration: none;
+    color: #50448B;
+    text-shadow: 3px 3px 5px #423366c8;}
+/* ~~~~~~~~~~~~~ img-paralax ~~~~~~~~~~~~~~~ */
+.img-paralax{
+    height: 450px;
+    background-image: url('Pt-original.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;}
+.Paralax-text{
+    height: 450px;
+    background-image: url('remanescentes.jpg');
+    background-size: cover;
+    background-attachment: fixed;}
+div#glour{
+    position: relative;
+    max-width: 500px;
+    background: #e1e1e1d4;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #55476bcd;
+    top: 50%;
+    transform: translateY(-50%);}
